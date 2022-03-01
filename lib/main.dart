@@ -28,6 +28,7 @@ class RandomWords extends StatefulWidget {
 class _RandomWordsState extends State<RandomWords> {
 
   final _suggestions = <WordPair>[];
+  final _saved = <WordPair>{};
   final _bigFont = const TextStyle(fontSize: 18.0);
 
 
@@ -49,14 +50,26 @@ class _RandomWordsState extends State<RandomWords> {
                 _suggestions.addAll(generateWordPairs().take(10));
               }
 
-              return ListTile(
-                title: Text(
-                  _suggestions[index].asPascalCase,
-                  style: _bigFont,
-                ),
-              );
+              return _buildrow(_suggestions[index]);
             }
           )
+      );
+  }
+
+  Widget _buildrow(WordPair pair)
+  {
+    final alreadySaved = _saved.contains(pair);
+    
+      return ListTile(
+        title: Text(
+          pair.asPascalCase,
+          style: _bigFont,
+        ),
+        trailing: Icon(
+          alreadySaved ? Icons.favorite: Icons.favorite_border,
+          color: alreadySaved ? Colors.red : null,
+          semanticLabel: alreadySaved ? "Remove from saved" : "Save"
+        ),
       );
   }
   /*Widget build(BuildContext context) {
