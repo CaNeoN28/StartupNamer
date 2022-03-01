@@ -11,8 +11,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Startup Name Generator",
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white
+        )
+      ),
       home: RandomWords()
     );
   }
@@ -72,8 +78,9 @@ class _RandomWordsState extends State<RandomWords> {
           actions: [
             IconButton(
               onPressed: _pushSaved,
-               icon: const Icon(Icons.list),
-               tooltip: "Saved Suggestions",)
+              icon: const Icon(Icons.list),
+              tooltip: "Saved Suggestions",
+              ),
           ],
         ),
         body: ListView.builder(
