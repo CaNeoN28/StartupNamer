@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter/Layouts/rows_columns.dart';
 
 import 'Layouts/layouts.dart';
 
 void main() {
-  runApp(const MyLayouts());
+  runApp(const RowsAndColumns());
 }
 
 class MyApp extends StatelessWidget {
