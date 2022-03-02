@@ -19,7 +19,7 @@ class RowsAndColumns extends StatelessWidget {
                     child: Image.asset("assets/ball.png"),
                   ),
                   Expanded(
-                    flex: 2,
+                    //flex: 2,
                     child: Image.asset("assets/ball.png"),
                   ),
                   Expanded(
@@ -37,7 +37,7 @@ class RowsAndColumns extends StatelessWidget {
                     child: Image.asset("assets/ball.png"),
                   ),
                   Expanded(
-                    flex: 2,
+                    //flex: 2,
                     child: Image.asset("assets/ball.png"),
                   ),
                   Expanded(
