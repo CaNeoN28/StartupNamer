@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter/layouts.dart';
+
+import 'Layouts/layouts.dart';
 
 void main() {
   runApp(const MyLayouts());
